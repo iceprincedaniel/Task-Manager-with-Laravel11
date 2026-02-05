@@ -13,13 +13,7 @@ return new class extends Migration
     // database/migrations/xxxx_xx_xx_add_project_id_to_tasks_table.php
     public function up(): void
     {
-        Schema::table('tasks', function (Blueprint $table) {
-            $table->foreignId('project_id')
-                ->nullable()
-                ->constrained()
-                ->cascadeOnDelete()
-                ->after('id');
-        });
+        // Column already exists in create_tasks_table migration
     }
 
 
